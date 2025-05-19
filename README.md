@@ -1,5 +1,31 @@
 # Three Tier Architecture Deployment on AWS EKS
 
+
+#Steps
+EEks Cluster Creation
+![1ekscluster creation](https://github.com/user-attachments/assets/892fa781-f1f7-47b9-9bad-0231e9a1f903)
+
+success cluster creation
+
+![2success cluster created](https://github.com/user-attachments/assets/f260be4c-de72-4e76-8472-ab18672c7a12)
+
+Iam Oidc provide creation
+
+![3](https://github.com/user-attachments/assets/1210927b-682f-4647-ba10-d7d0b985f1d4)
+
+AWS Load balancer creation
+![5load balancer completed](https://github.com/user-attachments/assets/dca248ad-4232-48be-b696-b49cbaeb9b37)
+
+Configured the EBS CSI Plugin because in my application it contains redis by default fargate dosen't reddis. In that case I used EC2 instance
+
+![8EBS CSI Plugin configuration](https://github.com/user-attachments/assets/ba0377ae-826d-4d05-97d5-17c954a036bb)
+
+Deployed the Application Load Balancer Controller by using HELM
+![10 helmchart is done](https://github.com/user-attachments/assets/06f48782-6ba8-414e-babd-6b78f47acfbb)
+![11allport are up and running](https://github.com/user-attachments/assets/132f2c7f-a45e-4b2b-b8c7-dd7c6042ac0e)
+
+#Three Tier Application
+
 Stan's Robot Shop is a sample microservice application you can use as a sandbox to test and learn containerised application orchestration and monitoring techniques. It is not intended to be a comprehensive reference example of how to write a microservices application, although you will better understand some of those concepts by playing with Stan's Robot Shop. To be clear, the error handling is patchy and there is not any security built into the application.
 
 You can get more detailed information from my [blog post](https://www.instana.com/blog/stans-robot-shop-sample-microservice-application/) about this sample microservice application.
